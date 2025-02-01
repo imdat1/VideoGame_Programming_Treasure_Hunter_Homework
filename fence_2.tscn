@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://c2018vqygbh1v"]
+
+[ext_resource type="PackedScene" uid="uid://cyhohxhw867tv" path="res://park_items/Graveyard/GLB format/fence.glb" id="1_msmsa"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_hmsm0"]
+points = PackedVector3Array(-0.333399, 0.64, -0.485012, -0.333399, 0.64, -0.515012, -0.5, 0.589945, -0.470012, 0.5, 0.589945, -0.470012, -0.5, 0.589945, -0.530012, 0.5, 0.589945, -0.530012, -0.5, 0.347439, -0.44, 0.5, 0.347439, -0.44, -0.5, 0.347439, -0.56, 0.5, 0.347439, -0.56, -0.5, 0.242443, -0.44, 0.5, 0.242443, -0.44, -0.5, 0.242443, -0.56, 0.5, 0.242443, -0.56, -0.5, 0, -0.470012, 0.5, 0, -0.470012, -0.5, 0, -0.530012, 0.5, 0, -0.530012)
+
+[node name="fence2" instance=ExtResource("1_msmsa")]
+
+[node name="fence" parent="." index="0"]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="fence" index="0"]
+transform = Transform3D(0.333333, 0, 0, 0, 0.333333, 0, 0, 0, 0.333333, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="fence/StaticBody3D" index="0"]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0)
+shape = SubResource("ConvexPolygonShape3D_hmsm0")

@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://csefpjwwhmss"]
+
+[ext_resource type="PackedScene" uid="uid://bgoum3jgepdr8" path="res://assets_test/StreetProps/FBX/TrashCan_02.fbx" id="1_vyu0c"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_1n6p7"]
+points = PackedVector3Array(-3.07895e-06, -0.0165496, 0.0175009, 0.00972476, -0.0133906, 0.0175009, -0.00972784, -0.0133906, 0.0175009, -3.07895e-06, -0.0135591, -0.0187653, 0.0157365, -0.00511585, 0.0175009, 0.00796839, -0.0109704, -0.0187653, -0.0157396, -0.00511585, 0.0175009, -0.00797147, -0.0109704, -0.0187653, 0.0157396, 0.00511261, 0.0175009, 0.0128924, -0.00419247, -0.0187653, -0.0157396, 0.00511261, 0.0175009, -0.0128955, -0.00419247, -0.0187653, 0.00972476, 0.0133874, 0.0175009, 0.0128924, 0.00418923, -0.0187653, 0.00796839, 0.0109672, -0.0187653, -0.00972784, 0.0133874, 0.0175009, -0.00797147, 0.0109672, -0.0187653, -0.0128955, 0.00418923, -0.0187653, -3.07895e-06, 0.0165496, 0.0175009, -3.07895e-06, 0.0135559, -0.0187653)
+
+[node name="TrashCan_02" instance=ExtResource("1_vyu0c")]
+
+[node name="TrashCan_02" parent="." index="0"]
+transform = Transform3D(50, 0, 0, 0, -2.18557e-06, 50, 0, -50, -2.18557e-06, 0, 0.948943, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="TrashCan_02" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="TrashCan_02/StaticBody3D" index="0"]
+shape = SubResource("ConvexPolygonShape3D_1n6p7")

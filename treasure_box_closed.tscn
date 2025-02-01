@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://bhn05ewrsrjgq"]
+
+[ext_resource type="PackedScene" uid="uid://bwhwhh1yckfsp" path="res://assets_test/RPG_ITENS_V.1/FBX/TreasureBox_closed.fbx" id="1_viknb"]
+[ext_resource type="Script" path="res://TreasureBox_closed.gd" id="2_dy6vf"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_fu7uw"]
+points = PackedVector3Array(0.31176, 0.267288, -0.0685971, 0.183162, 0.264949, 0.141511, 0.306938, 0.264864, 0.140368, 0.31176, -0.136911, -0.0685971, 0.31176, 0.267288, -0.0968527, -0.31176, 0.267288, -0.0685971, 0.183162, -0.134572, 0.141511, -0.183223, 0.264949, 0.141511, 0.306938, -0.134487, 0.140368, 0.31176, -0.136911, -0.0968527, 0.0584092, -0.167146, 0.0361653, -0.31176, 0.267288, -0.0968527, -0.31176, -0.136911, -0.0685971, -0.306999, 0.264864, 0.140368, -0.183223, -0.134572, 0.141511, 0.0584092, -0.167146, -0.0260622, -0.31176, -0.136911, -0.0968527, -0.0584703, -0.167146, 0.0361653, -0.306999, -0.134487, 0.140368, -0.0584703, -0.167146, -0.0260622)
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_pilmr"]
+radius = 0.659938
+
+[node name="TreasureBox_closed" instance=ExtResource("1_viknb")]
+script = ExtResource("2_dy6vf")
+
+[node name="TreasureBox_closed" parent="." index="0"]
+transform = Transform3D(1.5, 0, 0, 0, -6.55671e-08, 1.5, 0, -1.5, -6.55671e-08, 0, 0.63, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="TreasureBox_closed" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="TreasureBox_closed/StaticBody3D" index="0"]
+shape = SubResource("ConvexPolygonShape3D_fu7uw")
+
+[node name="Area3D" type="Area3D" parent="." index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.695314, 1.23623)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.184866, -0.788245)
+shape = SubResource("SphereShape3D_pilmr")
+
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
+[connection signal="body_exited" from="Area3D" to="." method="_on_area_3d_body_exited"]

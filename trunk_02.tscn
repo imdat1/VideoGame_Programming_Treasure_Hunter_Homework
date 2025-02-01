@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://sr5x5mvd61bt"]
+
+[ext_resource type="PackedScene" uid="uid://cbhpo0fgby8ys" path="res://assets_test/Environoment Pack V.1/FBX/Trunk_02.fbx" id="1_8ixtv"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_cq8sx"]
+points = PackedVector3Array(0.00636109, 0.00206586, 0, 0.00393023, -0.00541107, 0, -9.31323e-10, 0.00668845, 0, -9.31323e-10, 0.00499954, 0.0116696, 0.00444953, 0.00140616, 0.00661449, 0.00194145, -0.00413432, 0.0130577, -0.00393148, -0.00541107, 0, -0.00636109, 0.00206586, 0, -0.00438353, 0.000992816, 0.0121988, -9.31323e-10, 0.00431142, 0.0118332, -0.00370981, 0.00077963, 0.0122499, -0.0035529, -0.00260056, 0.0114395)
+
+[node name="Trunk_02" instance=ExtResource("1_8ixtv")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Trunk_02" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Trunk_02/StaticBody3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, -1.42109e-14, 0, 1.42109e-14, 1, 0, 0, 0)
+shape = SubResource("ConvexPolygonShape3D_cq8sx")

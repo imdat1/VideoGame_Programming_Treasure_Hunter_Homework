@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://cia2yokgtrqsn"]
+
+[ext_resource type="PackedScene" uid="uid://cja0xhvaw3sjk" path="res://assets_test/RPG_ITENS_V.1/FBX/TreasureBox_open.fbx" id="1_n1wl3"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_rqc30"]
+points = PackedVector3Array(-0.31176, -0.232878, -0.156529, -0.31176, -0.232878, -0.128272, -0.31176, 0.171291, -0.156529, 0.31176, -0.232878, -0.156529, -0.183223, -0.230544, 0.0817746, -0.306999, -0.230505, 0.0806831, -0.306999, 0.0500324, 0.462515, -0.31176, 0.171291, -0.128272, 0.31176, -0.232878, -0.128272, 0.31176, 0.171291, -0.156529, 0.183162, -0.230544, 0.0817746, -0.183223, 0.0511006, 0.462939, -0.306999, 0.169392, 0.0851097, 0.306938, 0.0500324, 0.462515, -0.183223, 0.170183, 0.0859586, 0.31176, 0.171291, -0.128272, 0.306938, -0.230505, 0.0806831, 0.183162, 0.0511006, 0.462939, 0.306938, 0.169392, 0.0851097, 0.183162, 0.170183, 0.0859586)
+
+[node name="TreasureBox_open" instance=ExtResource("1_n1wl3")]
+
+[node name="TreasureBox_open" parent="." index="0"]
+transform = Transform3D(1.5, 0, 0, 0, -6.55671e-08, 1.5, 0, -1.5, -6.55671e-08, 0, 0.63, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="TreasureBox_open" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="TreasureBox_open/StaticBody3D" index="0"]
+shape = SubResource("ConvexPolygonShape3D_rqc30")
