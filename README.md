@@ -1,5 +1,5 @@
 ## Treasure Hunter Game
-\n
+
 This repo is for a game I made for my subject "Programming for Video Games" at uni. The game's
 called "Treasure Hunter", and is made in Godot.
 
